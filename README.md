@@ -1,72 +1,116 @@
-# CopyGen AI SaaS Platform
+<div align="center">
+  <h1>🚀 CopyGen AI</h1>
+  <p>An enterprise-grade, localized AI copywriting platform designed to scale.</p>
 
-CopyGen is an enterprise-grade AI copywriting SaaS. It generates tailored marketing copy, value propositions, and audience targeting materials with deep RTL and localization support (English & Arabic).
+  [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+  [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+  [![Hotwire Turbo](https://img.shields.io/badge/Hotwire-000000?style=for-the-badge&logo=hotwire&logoColor=white)](https://hotwired.dev/)
+</div>
 
-## Overview
-Built to handle real-world content generation, this platform leverages a robust Laravel 11 backend, integrated directly with modern AI endpoints. It features an ultra-fast Turbo-enabled SPA architecture, premium enterprise UI styling, and a mathematically bulletproof mobile user experience.
+<br />
 
-### Key Features
-- **Intelligent Localization:** Auto-switching between tailored English prompt architectures and entirely native Arabic NLP logic depending on the app's chosen locale.
-- **Flawless Mobile Experience:** Cross-browser structural layout mechanics built to bypass common iOS Safari rendering bugs (e.g., hidden footers, viewport overflow).
-- **High-Velocity SPA Navigation:** Powered by `@hotwired/turbo` for instantaneous, invisible dashboard transitions without full page loads.
-- **Typography Parity:** A master CSS Font Stack (`'Plus Jakarta Sans', 'Cairo'`) that guarantees mixed-language character boundaries without Javascript intervention.
+## 📖 Overview
+CopyGen is a high-performance **AI copywriting SaaS** built to generate tailored marketing copy, value propositions, and audience targeting materials. Engineered for enterprise flexibility, it features an ultra-fast Hotwired Turbo SPA architecture, premium UI styling, and deep out-of-the-box support for both **English (LTR)** and **Arabic (RTL)** right down to the typography and NLP generation layers.
 
-## Screenshots
+---
 
-| Landing Page (English) | Landing Page (عربي) |
-| :---: | :---: |
-| ![Landing Page English](screenshots/landing-page-english.png) | ![Landing Page Arabic](screenshots/landing-page-arabic.png) |
+## ✨ Core Features
 
-| Dashboard & Generator (English) | Dashboard & Generator (عربي) |
-| :---: | :---: |
-| ![Dashboard English](screenshots/dashboard-generator-english.png) | ![Dashboard Arabic](screenshots/dashboard-generator-arabic.png) |
+- **🌐 Intelligent Localization & RTL**  
+  Auto-switching between tailored English prompt architectures and entirely native Arabic NLP logic depending on the app's chosen locale. Mathematical PostCSS-driven Left-to-Right (LTR) and Right-to-Left (RTL) flipping guarantees UI integrity.
+  
+- **⚡ High-Velocity SPA Navigation**  
+  Powered by `@hotwired/turbo` for instantaneous, invisible dashboard transitions without full page loads, delivering a desktop-like application feel.
 
-| Library (English) | Library (عربي) |
-| :---: | :---: |
-| ![Library English](screenshots/library-page-english.png) | ![Library Arabic](screenshots/library-page-arabic.png) |
+- **📱 Flawless Mobile Experience**  
+  A completely bulletproof mobile UI. The mobile navigation drawer uses zero-dependency vanilla JS and explicit viewport mathematics (`100dvh` and safe-area margins) to eliminate common iOS Safari scrolling bugs.
 
-| Profile (English) | Profile (عربي) |
-| :---: | :---: |
-| ![Profile English](screenshots/profile-page-english.png) | ![Profile Arabic](screenshots/profile-page-arabic.png) |
+- **🔤 Typography Parity**  
+  A master CSS Font Stack utilizing `'Plus Jakarta Sans'` and `'Cairo'` that flawlessly maintains mixed-language character boundaries without Javascript intervention.
 
-## Tech Stack
+---
+
+## 🛠️ Tech Stack
+
+### Backend
 - **Framework:** Laravel 11 (PHP 8.2+)
-- **Frontend Engine:** Hotwire Turbo Drive
-- **Styling Architecture:** PostCSS RTLCSS for dynamic Left-to-Right / Right-to-Left compilation, SCSS, and atomic design primitives.
-- **Icons:** Lucide Icons (lightweight JS injection)
+- **Database:** MySQL / PostgreSQL
+- **Architecture:** Hotwire Turbo integration for SPA routing
+
+### Frontend
+- **Styling Architecture:** SCSS, PostCSS RTLCSS (dynamic LTR/RTL compilation), CSS Variables
+- **Icons:** Lucide Icons (lightweight JS wrapper)
 - **Asset Pipeline:** Vite
 
-## Installation & Setup
+---
+
+## 📸 Screenshots
+
+### 🏠 Landing Page
+<div align="center">
+  <img src="screenshots/landing-page-english.png" alt="Landing Page - English" width="48%">
+  <img src="screenshots/landing-page-arabic.png" alt="Landing Page - Arabic" width="48%">
+  <p><i>Left: English (LTR) — Right: Arabic (RTL)</i></p>
+</div>
+
+### 🎛️ Dashboard / Generator
+<div align="center">
+  <img src="screenshots/dashboard-generator-english.png" alt="Dashboard Generator - English" width="48%">
+  <img src="screenshots/dashboard-generator-arabic.png" alt="Dashboard Generator - Arabic" width="48%">
+  <p><i>The core AI generation playground adapting context automatically.</i></p>
+</div>
+
+### 📚 Library
+<div align="center">
+  <img src="screenshots/library-page-english.png" alt="Library Page - English" width="48%">
+  <img src="screenshots/library-page-arabic.png" alt="Library Page - Arabic" width="48%">
+  <p><i>Saved generated outputs with seamless language support.</i></p>
+</div>
+
+### 👤 Profile
+<div align="center">
+  <img src="screenshots/profile-page-english.png" alt="Profile Page - English" width="48%">
+  <img src="screenshots/profile-page-arabic.png" alt="Profile Page - Arabic" width="48%">
+  <p><i>User settings and preferences interface.</i></p>
+</div>
+
+---
+
+## 🚀 Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/copygen-ai.git
-   cd copygen-ai
+   git clone https://github.com/mmohamedr/copygen-ai-saas.git
+   cd copygen-ai-saas
    ```
 
-2. **Install PHP and Node dependencies:**
+2. **Install dependencies:**
    ```bash
    composer install
-   npm install && npm run build
+   npm install
    ```
 
-3. **Environment Setup:**
+3. **Build Frontend Assets:**
+   ```bash
+   npm run build
+   ```
+
+4. **Environment Setup:**
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
-   *Configure your DB credentials and AI API paths inside `.env`.*
+   *Note: Open `.env` and configure your database credentials and AI API paths.*
 
-4. **Migrate the Database:**
+5. **Run Database Migrations:**
    ```bash
    php artisan migrate
    ```
 
-5. **Start the Application:**
+6. **Start the Application:**
    ```bash
    php artisan serve
    ```
+   *Your app will be available at `http://127.0.0.1:8000`.*
 
-## Production Engineering Highlights
-- **Mobile Safari Avoidance:** The mobile drawer chassis uses explicit `100dvh` declarations coupled with `calc()` margin offsets anchored to `env(safe-area-inset-bottom)`. This mathematically seals out layout overflow bugs on iOS/Android browsers.
-- **Zero-Dependency Navigation Drawer:** To preserve compatibility with Turbo, the entire mobile navigation experience was decoupled from Bootstrap's brittle DOM handlers and rewritten entirely in native JS and CSS grid logic.
+---
