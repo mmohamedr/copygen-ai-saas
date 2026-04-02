@@ -11,6 +11,24 @@ Built to handle real-world content generation, this platform leverages a robust 
 - **High-Velocity SPA Navigation:** Powered by `@hotwired/turbo` for instantaneous, invisible dashboard transitions without full page loads.
 - **Typography Parity:** A master CSS Font Stack (`'Plus Jakarta Sans', 'Cairo'`) that guarantees mixed-language character boundaries without Javascript intervention.
 
+## Screenshots
+
+| Landing Page (English) | Landing Page (عربي) |
+| :---: | :---: |
+| ![Landing Page English](screenshots/landing-page-english.png) | ![Landing Page Arabic](screenshots/landing-page-arabic.png) |
+
+| Dashboard & Generator (English) | Dashboard & Generator (عربي) |
+| :---: | :---: |
+| ![Dashboard English](screenshots/dashboard-generator-english.png) | ![Dashboard Arabic](screenshots/dashboard-generator-arabic.png) |
+
+| Library (English) | Library (عربي) |
+| :---: | :---: |
+| ![Library English](screenshots/library-page-english.png) | ![Library Arabic](screenshots/library-page-arabic.png) |
+
+| Profile (English) | Profile (عربي) |
+| :---: | :---: |
+| ![Profile English](screenshots/profile-page-english.png) | ![Profile Arabic](screenshots/profile-page-arabic.png) |
+
 ## Tech Stack
 - **Framework:** Laravel 11 (PHP 8.2+)
 - **Frontend Engine:** Hotwire Turbo Drive
